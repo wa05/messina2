@@ -1,0 +1,102 @@
+<h1>Cargar clientes</h1>
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Codigo</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Codigo" ng-model="formInfo.Codigo">
+		    </div>
+		    <label for="inputName3" class="col-sm-2 control-label">Tipo</label>
+		    <div class="col-sm-4">
+		      <select name="repeatSelect" id="ciudad" ng-model="formInfo.ciudad">
+    			  <option>A</option>
+    			  <option>B</option>
+    			  <option>9999</option>
+ 		  	  </select>
+		    </div>
+  		</div>
+  		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Cliente</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Cliente" ng-model="formInfo.Cliente">
+		    </div>	
+		    <label for="inputName3" class="col-sm-2 control-label">Cuit</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Cuit" ng-model="formInfo.Cuit">
+		    </div>	
+  		</div>
+  		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Direccion</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Direccion" ng-model="formInfo.Direccion">
+		    </div>	
+		    <label for="inputName3" class="col-sm-2 control-label">Ciudad</label>
+		    <div class="col-sm-4">
+		      <select name="repeatSelect" id="ciudad" ng-model="formInfo.ciudad">
+    			  <option ng-repeat="option in dataCiudad.availableOptions" value="{{option.id}}">{{option.name}}</option>
+ 		  	  </select>
+		    </div>
+
+  		</div>
+  		
+  		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Ultimo Pago</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="ultimoPago" ng-model="formInfo.ultimoPago">
+		    </div>	
+		    <label for="inputName3" class="col-sm-2 control-label">Monto</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="monto" ng-model="formInfo.monto">
+		    </div>	
+  		</div>
+  		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Latitud</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Latitud" ng-model="formInfo.Latitud">
+		    </div>	
+		    <label for="inputName3" class="col-sm-2 control-label">Longitud</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Longitud" ng-model="formInfo.Longitud">
+		    </div>	
+  		</div>
+  		<div class="form-group">
+		    
+  		</div>
+  		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Promedio $</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Promedio Abono en Pesos" ng-model="formInfo.promedioPesos">
+		    </div>	
+		    <label for="inputName3" class="col-sm-2 control-label">Promedio Botellones</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Promedio consumo mensual en Botellones" ng-model="formInfo.promedioBot">
+		    </div>
+  		</div>
+  		<div class="form-group">
+		    	
+  		</div>
+  		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Carpeta</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Nro. de Carpeta" ng-model="formInfo.Carpeta">
+		    </div>
+		    <label for="inputName3" class="col-sm-2 control-label">Observaciones</label>
+		    <div class="col-sm-4">
+		      <input class="form-control" id="inputName3" placeholder="Observaciones" ng-model="formInfo.Observaciones">
+		    </div>		
+  		</div>	
+  		<div class="form-group">
+		    <label for="inputName3" class="col-sm-2 control-label">Alertas</label>
+		    <div class="col-sm-4">
+		      <p>Alertas pendientes </p>
+		    </div>
+		    <label for="inputName3" class="col-sm-2 control-label">Dias Reparto</label>
+		    <div class="col-sm-4">
+		      <select name="diaRep" id="diaRep" ng-model="formInfo.diaRep">
+    			  <option ng-repeat="dia in diaReparto.availableOptions" value="{{dia.id}}">{{dia.name}}</option>
+ 		  	  </select>
+		    </div>		
+  		</div>
+  		<input type="submit" id="submit" value="Guardar" ng-click=save(formInfo) />
+
+
+	</form>

@@ -8,7 +8,7 @@
  * Controller of the messina2App
  */
 angular.module('messina2App')
-  .controller('CargaCtrl', function ($scope) {
+  .controller('CargaCtrl', function ($scope,$http) {
     	$scope.dataCiudad = {
     repeatSelect: null,
     availableOptions: [
@@ -41,4 +41,31 @@ angular.module('messina2App')
       {id: '13', name: 'L M V'},
 
     ],};
+
+    $scope.saveClient = function(){
+      $http.post('/php/cargaclientes.php', {
+        'codigo' : $scope.codigo,
+        'tipoFact' : $scope.tipoFact ,
+        'cliente' : $scope.cliente ,
+        'cuit' : $scope.cuit ,
+        'direccion' : $scope.direccion ,
+        'ciudad' : $scope.ciudad ,
+        'ultimoPago' : $scope.ultimoPago ,
+        'monto' : $scope.monto ,
+        'latitud' : $scope.latitud ,
+        'longitud' : $scope.longitud ,
+        'promedioPesos' : $scope.promedioPesos ,
+        'promedioBot' : $scope.promedioBot ,
+        
+        'obs' : $scope.obs,
+        'diaRep' : $scope.obs 
+      })
+      .success(function(data,status,headers,config){
+      console.log("Data correctly sended to DB");
+      console.log(data);
+    })  
+    .error(function(data,status,headers,config){
+      console.log("Failed to add data to DB");
+    });
+    };
   });

@@ -45,22 +45,21 @@ angular.module('messina2App')
     $scope.saveClient = function(){
       $http.post('/php/cargaclientes.php', {
         'codigo' : $scope.codigo,
-        'tipoFact' : $scope.tipoFact ,
+        'tipofact' : $scope.tipofact ,
         'cliente' : $scope.cliente ,
         'cuit' : $scope.cuit ,
         'direccion' : $scope.direccion ,
         'ciudad' : $scope.ciudad ,
-        'ultimoPago' : $scope.ultimoPago ,
+        'ultimopago' : $scope.ultimopago ,
         'monto' : $scope.monto ,
         'latitud' : $scope.latitud ,
         'longitud' : $scope.longitud ,
-        'promedioPesos' : $scope.promedioPesos ,
-        'promedioBot' : $scope.promedioBot ,
-        
-        'obs' : $scope.obs,
-        'diaRep' : $scope.obs 
-      })
-      .success(function(data,status,headers,config){
+        'promediopesos' : $scope.promediopesos ,
+        'promediobot' : $scope.promediobot ,
+        'carpeta' : $scope.carpeta ,
+        'obs' : $scope.obs
+
+      }).success(function(data,status,headers,config){
       console.log("Data correctly sended to DB");
       console.log(data);
     })  

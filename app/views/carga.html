@@ -7,7 +7,7 @@
 		    </div>
 		    <label for="inputName3" class="col-sm-2 control-label">Tipo</label>
 		    <div class="col-sm-4">
-		      <select name="repeatSelect" id="ciudad" ng-model="tipoFact">
+		      <select name="repeatSelect" id="ciudad" ng-model="tipofact">
     			  <option>A</option>
     			  <option>B</option>
     			  <option>9999</option>
@@ -41,7 +41,7 @@
   		<div class="form-group">
 		    <label for="inputName3" class="col-sm-2 control-label">Ultimo Pago</label>
 		    <div class="col-sm-4">
-		      <input class="form-control" id="inputName3" placeholder="ultimoPago" ng-model="ultimoPago">
+		      <input class="form-control" id="inputName3" placeholder="Ultimo Pago" ng-model="ultimopago">
 		    </div>	
 		    <label for="inputName3" class="col-sm-2 control-label">Monto</label>
 		    <div class="col-sm-4">
@@ -64,26 +64,24 @@
   		<div class="form-group">
 		    <label for="inputName3" class="col-sm-2 control-label">Promedio $</label>
 		    <div class="col-sm-4">
-		      <input class="form-control" id="inputName3" placeholder="Promedio Abono en Pesos" ng-model="promedioPesos">
+		      <input class="form-control" id="inputName3" placeholder="Promedio Abono en Pesos" ng-model="promediopesos">
 		    </div>	
 		    <label for="inputName3" class="col-sm-2 control-label">Promedio Botellones</label>
 		    <div class="col-sm-4">
-		      <input class="form-control" id="inputName3" placeholder="Promedio consumo mensual en Botellones" ng-model="promedioBot">
+		      <input class="form-control" id="inputName3" placeholder="Promedio consumo mensual en Botellones" ng-model="promediobot">
 		    </div>
   		</div>
   		<div class="form-group">
 		    	
   		</div>
   		<div class="form-group">
-  			<!--
 		    <label for="inputName3" class="col-sm-2 control-label">Carpeta</label>
 		    <div class="col-sm-4">
-		      <input class="form-control" id="carpeta" placeholder="Nro. de Carpeta" ng-model="carpeta">
+		      <input class="form-control" id="inputName3" placeholder="Nro. de Carpeta" ng-model="carpeta">
 		    </div>
-		-->
 		    <label for="inputName3" class="col-sm-2 control-label">Observaciones</label>
 		    <div class="col-sm-4">
-		      <input class="form-control" id="obs" placeholder="Observaciones" ng-model="obs">
+		      <input class="form-control" id="inputName3" placeholder="Observaciones" ng-model="obs">
 		    </div>		
   		</div>	
   		<div class="form-group">
@@ -91,15 +89,16 @@
 		    <div class="col-sm-4">
 		      <p>Alertas pendientes </p>
 		    </div>
+		    <!--
 		    <label for="inputName3" class="col-sm-2 control-label">Dias Reparto</label>
 		    <div class="col-sm-4">
 		      <select name="diaRep" id="diaRep" ng-model="diaRep">
     			  <option ng-repeat="dia in diaReparto.availableOptions" value="{{dia.id}}">{{dia.name}}</option>
  		  	  </select>
-		    </div>		
+		    </div>
+		    -->		
   		</div>
-  		<input type="submit" id="submit" name="saveClient" value="Guardar" ng-click="saveClient()" />
-
+  		<input type="submit" id="submit" value="Guardar" ng-click="saveClient()" />
 
 
 	</form>

@@ -73,6 +73,8 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+
+
   .container {
     max-width: 1230px;
   }
@@ -83,6 +85,10 @@ body {
   .footer {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .header{
+    margin-bottom: 0px; 
   }
   /* Space out the masthead */
   .header {

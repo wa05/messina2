@@ -8,10 +8,8 @@
  * Controller of the messina2App
  */
 angular.module('messina2App')
-  .controller('AgendaCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AgendaCtrl', function ($scope,$http) {
+    
+    
+
   });

@@ -9,6 +9,8 @@ include('conexion.php');
     $cuit      = $dbhandle -> real_escape_string($data->cuit);    
     $direccion     =$dbhandle ->  real_escape_string($data->direccion);
     $ciudad      =$dbhandle ->  real_escape_string($data->ciudad);  
+    $telefono     =$dbhandle ->  real_escape_string($data->telefono);
+    $mail      =$dbhandle ->  real_escape_string($data->mail);
     $ultimopago      = $dbhandle -> real_escape_string($data->ultimopago);    
     $monto     =$dbhandle ->  real_escape_string($data->monto);
     $latitud      =$dbhandle ->  real_escape_string($data->latitud);  
@@ -18,7 +20,7 @@ include('conexion.php');
     $carpeta     =$dbhandle ->  real_escape_string($data->carpeta);
     $obs      =$dbhandle ->  real_escape_string($data->obs);  
 
-    $query = 'INSERT INTO messinapp (codigo,tipofact,cliente,cuit,direccion,ciudad,ultimopago,monto,latitud,longitud,promediopesos,promediobot,carpeta,obs) VALUES ("' . $codigo  . '","' . $tipofact . '","' . $cliente . '","' . $cuit . '","' . $direccion . '","' . $ciudad . '","' . $ultimopago . '","' . $monto . '","' . $latitud . '","' . $longitud . '","' . $promediopesos . '","' . $promediobot . '","' . $carpeta . '","' . $obs . '")';
+    $query = 'INSERT INTO messinapp (codigo,tipofact,cliente,cuit,direccion,ciudad,telefono,mail,ultimopago,monto,latitud,longitud,promediopesos,promediobot,carpeta,obs) VALUES ("' . $codigo  . '","' . $tipofact . '","' . $cliente . '","' . $cuit . '","' . $direccion . '","' . $ciudad . '","' . $telefono . '","' . $mail . '","' . $ultimopago . '","' . $monto . '","' . $latitud . '","' . $longitud . '","' . $promediopesos . '","' . $promediobot . '","' . $carpeta . '","' . $obs . '")';
 
     $dbhandle->query($query);
 

@@ -50,6 +50,8 @@ angular.module('messina2App')
         'cuit' : $scope.cuit ,
         'direccion' : $scope.direccion ,
         'ciudad' : $scope.ciudad ,
+        'telefono' : $scope.telefono ,
+        'mail' : $scope.mail,
         'ultimopago' : $scope.ultimopago ,
         'monto' : $scope.monto ,
         'latitud' : $scope.latitud ,
@@ -61,10 +63,23 @@ angular.module('messina2App')
 
       }).success(function(data,status,headers,config){
       console.log("Data correctly sended to DB");
-      console.log(data);
+      $scope.displayClients();
     })  
     .error(function(data,status,headers,config){
       console.log("Failed to add data to DB");
     });
     };
+
+    $scope.clients = [];
+    $scope.displayClients = function(){
+      $http.get('/php/getclients.php')
+        .success(function(data){
+            $scope.clients = data;
+            console.log(data);
+        })
+        .error(function(data,status,headers,config){
+          console.log("Failed to add data to DB");
+        });
+    };
+
   });

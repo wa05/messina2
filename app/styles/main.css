@@ -20,7 +20,7 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -70,7 +70,13 @@ body {
 #codigo,#ultimoPago,#monto,#promedioPesos,#promedioBot{
   width: 45px;
 }
-
+.searcher{
+  width: 100%;
+  height: 30px;
+  font-size: 25px;
+  margin: 0 auto;
+  border: 2px solid black;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
@@ -88,14 +94,13 @@ body {
   }
 
   .header{
-    margin-bottom: 0px; 
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+    margin-bottom: 10px; 
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+  *{
+    font-family: 'Open Sans', sans-serif;
   }
 }

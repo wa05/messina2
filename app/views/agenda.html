@@ -1,4 +1,5 @@
-<table class="table">
+<input ng-model="searcher" class="searcher">
+<table class="table table-hover">
 <thead>
 	<tr>
 		<th>Codigo</th>
@@ -12,7 +13,7 @@
 	</tr>
 </thead>
 <tbody>
-	<tr ng-repeat="cli in clientes">
+	<tr ng-repeat="cli in clientes | filter:searcher">
 		<th>{{cli.codigo}}</th>
 		<th>{{cli.cliente}}</th>
 		<th>{{cli.direccion}}</th>

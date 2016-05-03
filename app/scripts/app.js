@@ -39,6 +39,11 @@ angular
         controller: 'AgendaCtrl',
         controllerAs: 'agenda'
       })
+      .when('/maps', {
+        templateUrl: 'views/maps.html',
+        controller: 'MapsCtrl',
+        controllerAs: 'maps'
+      })
       .otherwise({
         redirectTo: '/'
       });

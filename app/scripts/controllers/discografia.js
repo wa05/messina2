@@ -36,5 +36,5 @@ angular.module('vicbir2.discografia',[])
 			console.log("Failed to add data to DB");
 		});
 		
-	}
+	};
   });

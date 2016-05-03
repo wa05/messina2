@@ -8,7 +8,7 @@
  * Controller of the messina2App
  */
 angular.module('messina2App')
-  .controller('CargaCtrl', function ($scope,$http) {
+  .controller('CargaCtrl', function ($scope,$http,datapass) {
     	$scope.dataCiudad = {
     repeatSelect: null,
     availableOptions: [
@@ -63,23 +63,13 @@ angular.module('messina2App')
 
       }).success(function(data,status,headers,config){
       console.log("Data correctly sended to DB");
-      $scope.displayClients();
+      datapass.displayClients();
     })  
     .error(function(data,status,headers,config){
       console.log("Failed to add data to DB");
     });
     };
 
-    $scope.clients = [];
-    $scope.displayClients = function(){
-      $http.get('/php/getclients.php')
-        .success(function(data){
-            $scope.clients = data;
-            console.log(data);
-        })
-        .error(function(data,status,headers,config){
-          console.log("Failed to add data to DB");
-        });
-    };
+    
 
   });

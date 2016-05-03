@@ -1,22 +1,24 @@
-<table>
+<table class="table">
 <thead>
 	<tr>
 		<th>Codigo</th>
 		<th>Cliente</th>
 		<th>Direccion</th>
-		<th></th>
-		<th></th>
+		<th>Ciudad</th>
+		<th>Repartidor</th>
+		<th>Dia Reparto</th>
 		<th></th>
 		<th></th>
 	</tr>
 </thead>
 <tbody>
-	<tr>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
+	<tr ng-repeat="cli in clientes">
+		<th>{{cli.codigo}}</th>
+		<th>{{cli.cliente}}</th>
+		<th>{{cli.direccion}}</th>
+		<th>{{cli.ciudad}}</th>
+		<th>{{cli.repartidor}}</th>
+		<th>{{cli.diarep}}</th>
 		<th></th>
 		<th></th>
 	</tr>

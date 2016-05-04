@@ -7,11 +7,7 @@
  * # MapsCtrl
  * Controller of the messina2App
  */
-angular.module('messina2App')
+angular.module('messina2App', [])
   .controller('MapsCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
   });

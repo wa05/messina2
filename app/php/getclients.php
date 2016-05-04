@@ -12,3 +12,4 @@ while($row = $rs->fetch_assoc()){
 print json_encode($data);
 
 ?>
+

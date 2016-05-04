@@ -44,6 +44,7 @@
               <li class="active"><a href="/">Inicio</a></li>
               <li><a ng-href="/carga">Cargar clientes</a></li>
               <li><a ng-href="/agenda">Agenda Clientes</a></li>
+              <li><a ng-href="/maps">Mapa</a></li>
             </ul>
           </div>
         </div>
@@ -71,7 +72,7 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
+    <script src='bower_components/lodash/dist/lodash.min.js'></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -85,6 +86,9 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+<script src='bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+<script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>

@@ -24,5 +24,4 @@ include('conexion.php');
 
     $dbhandle->query($query);
 
-
 ?>

@@ -63,7 +63,7 @@ angular.module('messina2App')
 
       }).success(function(data,status,headers,config){
       console.log("Data correctly sended to DB");
-      datapass.displayClients();
+      
     })  
     .error(function(data,status,headers,config){
       console.log("Failed to add data to DB");
